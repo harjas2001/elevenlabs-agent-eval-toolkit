@@ -1,0 +1,37 @@
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Output reports (generated, not committed)
+output/
+!output/.gitkeep
+
+# Test cases (real utterances are private config)
+test_cases/utterances.yaml
+!test_cases/utterances.example.yaml
+
+# Audio (generated during eval, not committed)
+*.mp3
+*.wav
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Virtual environments
+labsvenv/
