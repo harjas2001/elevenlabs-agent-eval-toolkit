@@ -81,6 +81,13 @@ Open the generated report from the `output/` directory in any browser. (Just use
 
 ---
 
+## Simple demo example
+
+<img width="965" height="1174" alt="image" src="https://github.com/user-attachments/assets/9cc0fba4-6f35-4bb2-9074-8e0cf4f3334c" />
+<img width="966" height="1010" alt="image" src="https://github.com/user-attachments/assets/cb1f154f-7286-4790-80b7-ab4be10d2d17" />
+
+---
+
 ## Configuration
 
 | Variable | Description |
