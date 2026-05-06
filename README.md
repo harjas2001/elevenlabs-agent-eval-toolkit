@@ -89,6 +89,21 @@ Open the generated report from the `output/` directory in any browser.
 | `ELEVENLABS_AGENT_ID` | Agent to pull conversation history from |
 | `EVAL_VOICE_ID` | Optional — TTS voice for utterance synthesis (default: Rachel) |
 
+### ElevenLabs plan requirements
+
+> **Note:** The STT accuracy pipeline (Mode A) requires a **paid ElevenLabs plan** (Starter or above).
+
+| Feature | Free Plan | Starter+ |
+|---|---|---|
+| TTS API — library voices | ✗ Not available | ✓ Available |
+| TTS API — your own cloned voices | ✗ Not available | ✓ Available |
+| STT API (Scribe v1) | ✗ Not available | ✓ Available |
+| Conversation history API | ✓ Available | ✓ Available |
+| Mode A — STT Accuracy pipeline | ✗ | ✓ |
+| Mode B — Conversation History pipeline | ✓ | ✓ |
+
+**Free plan workaround for STT mode:** Use `python eval.py history` to run conversation history analysis only — this works on all plans. To use the full pipeline including STT accuracy testing, upgrade to Starter or use an Instant Voice Clone created from your own recording (dashboard → Voices → Add Voice → Instant Voice Clone) and set its ID as `EVAL_VOICE_ID`.
+
 ### WER classification thresholds
 
 | Range | Classification | Meaning |
