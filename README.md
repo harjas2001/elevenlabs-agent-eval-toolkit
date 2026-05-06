@@ -6,9 +6,9 @@ QA and evaluation pipeline for ElevenLabs voice agents — STT accuracy testing 
 
 ## Background
 
-Deploying a voice agent without validating STT accuracy against your domain vocabulary is one of the most common failure modes in enterprise contact centre AI. A model that mishears "roaming" as "Roman" or "iiNet" as "I net" creates a broken customer experience that is invisible until it's in production.
+Deploying a voice agent without validating STT accuracy against your domain vocabulary is one of the most common failure modes in enterprise contact centre AI. A model that mishears "roaming" as "Roman" or "confuse" as "con fuze" creates a broken customer experience that is invisible until it's in production.
 
-This toolkit provides a pre-launch validation pipeline and a post-launch feedback loop — the two instruments an operations team needs to manage a voice agent with confidence. Built as a reference implementation for enterprise ElevenLabs deployments in high-volume customer service contexts.
+This toolkit provides a pre-launch validation pipeline and a post-launch feedback loop, the two instruments an operations team needs to manage a voice agent with confidence. Built as a reference implementation for enterprise ElevenLabs deployments in high-volume customer service contexts.
 
 ---
 
@@ -77,7 +77,7 @@ python eval.py full
 python eval.py full --utterances test_cases/custom.yaml --limit 50
 ```
 
-Open the generated report from the `output/` directory in any browser.
+Open the generated report from the `output/` directory in any browser. (Just use Live Server)
 
 ---
 
