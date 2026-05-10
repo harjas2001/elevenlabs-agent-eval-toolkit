@@ -242,6 +242,13 @@ def _print_history_summary(agg: dict) -> None:
     console.print(f"  Containment rate:  [{colour}]{cr}%[/{colour}]")
     console.print(f"  Escalations:       {agg.get('escalated_count', 0)}")
     console.print(f"  Avg turns:         {agg.get('avg_turns', 0)}")
+    console.print(f"  Avg session duration: {agg.get('avg_duration_sec', 0)} seconds")
+    if agg.get("flagged"):
+        console.print(f"  [yellow]Flagged conversations:[/yellow]")
+        for f in agg["flagged"]:
+            console.print(f"    [{f['classification']}] Session ID: {f['session_id']} | "
+                          f"Containment: {f['containment']} | Turns: {f['turn_count']} | "
+                          f"Duration: {f['duration_sec']}s")
 
 
 if __name__ == "__main__":
